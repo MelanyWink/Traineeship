@@ -1,0 +1,198 @@
+﻿body {
+    background-color: #FFFFFF;
+    font-family: 'Caudex', serif;
+}
+
+.navbar-form {
+    display: none;
+}
+
+.nav > li > a {
+    color: black;
+}
+
+#afsprk-btn {
+    color: white;
+}
+
+.lijntje {
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.header-plaatje{
+    width: 100%;
+    margin: 0; 
+    border: 0;
+}
+
+.img-header{
+    width: 86%;
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+.content-container{
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.formulier-venster{
+    width: 82%;
+    margin-left: 8%;
+    margin-right: 10%;
+    max-height: 500px;
+    padding: 0;
+    border: hidden 1px;
+}
+
+.form-deel{
+    height: 100%;
+    width: 55%;
+    margin: 0;
+    float: left;
+    border: 0;
+    box-shadow: #e2e2e2 0 0 20px;
+}
+
+.form-step1{
+    height: 500px;
+    width: 100%;
+    float: right;
+    display: block;
+}
+
+.form-steps{
+    height: 500px;
+    width: 25%;
+    float: left;
+}
+
+.stepsplaatje{
+    height: 100%;
+    width: 100%;
+}
+
+.form-text{
+    height: 100%;
+    width: 75%;
+    float: left;
+    padding: 40px;
+}
+
+.select-deel{
+    height: 500px;
+    width: 45%;
+    float: right;
+    background-color: #F06E8A;
+    border: 0;   
+    position: relative;
+    box-shadow: #e2e2e2 0 0 20px;
+    color: white;
+}
+
+.select-datum{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 40px;
+    position: absolute;
+    display: block;
+    }
+
+.img-footer{
+    width: 100%;
+    margin-right: 0;
+    margin-top: 100px;
+}
+
+a:link {
+    color: white; 
+}
+a:visited {
+    color: white;
+}
+a:active {
+    color:white;
+}
+
+h3{
+    margin: 0;
+}
+
+h4{
+    margin: 0;
+}
+
+h5{
+    margin:0;
+}
+
+.dagen{
+    margin-top: 5px;
+    margin-right: 15px;
+    float: left;
+    font-family: 'Work Sans', sans-serif;
+}
+.tijden{
+    margin-top: 5px;
+    float: left;
+    font-family: 'Work Sans', sans-serif;
+}
+.openingstijden{
+    height: 66px;
+}
+
+#ddatum{
+   color: white;
+   border: none;
+   background: none;
+   position: absolute;
+   right: 40px;
+   bottom: 40px;
+}
+
+footer{
+    margin-right:4%;
+    margin-left:4%;
+    padding-top:4px;
+    padding-bottom:1%;
+}
+
+@media (max-width: 767px) {
+
+    .content-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .form-step1{
+        height: 432.400px;
+    }
+    .form-text{
+        width: 100%;
+    }
+    .form-steps{
+        display: none;
+        margin: 0;
+    }
+    .formulier-venster{
+        margin: 0;
+        width: 100%
+    }
+    .form-deel{
+        display: block;
+        width: 100%;
+    }
+    .select-deel{
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,143 @@
+﻿@model Introductie.Models.ViewModels.KlantAfspraak
+@{
+}
+<html>
+<head>
+    <title>AfspraakStappen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="~/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Stap2Van1.css" />
+    <link href="~/datepicker/css/datepicker.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/css/datepicker/js/jquery-1.7.1.min.js"></script>
+    <script src="~/css/datepicker/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+</head>
+
+<body data-tijden="@string.Join(",", Model.NietBeschikbareTijden)">
+    <div class="row lijntje text-center">
+        <hr style="margin:0; border-top: 3px solid #eee;" />
+    </div>
+    <div class="bodycontent">
+        <div class="header-plaatje">
+            <img class="img-header" src="~/images/Kopje.jpg" />
+        </div>
+        <div class="content-container">
+            <div class="formulier-venster">
+                <div class="form-deel">
+                    <div class="form-step1" id="formstep1">
+                        <div class="form-steps">
+                            <img class="stepsplaatje" src="~/images/step1.PNG" />
+                        </div>
+                        <div class="form-text">
+                            <h3>
+                                <b>
+                                    Stap 1, Datum en tijd selecteren
+                                </b>
+                            </h3>
+                            <br>
+                            <h4>
+                                Selecteer eerst een datum en vervolgens<br>
+                                een tijdstip dat je wilt komen passen!
+                            </h4>
+                            <br>
+                            <h5>
+                                Openingstijden:<br>
+                            </h5>
+                            <div class="openingstijden">
+                                <div class="dagen">
+                                    <h5>
+                                        <b>
+                                            MA<br>
+                                            DI-VR<br>
+                                            ZA<br>
+                                            ZO<br>
+                                        </b>
+                                    </h5>
+                                </div>
+                                <div class="tijden">
+                                    <h5>
+                                        <b>
+                                            12:00-17:30<br>
+                                            09:30-17:30<br>
+                                            09:30-18:00<br>
+                                            11:00-17:00<br>
+                                        </b>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <h5>
+                                *Op alle werkdagen kunnen er ook schoenen worden<br> gepast. Helaas is dit niet mogelijk in het weekend.
+                            </h5>
+                            <br>
+                            <div>
+                                @using (Html.BeginForm("Stap2", "AfspraakMaken", FormMethod.Post))
+                                {
+
+                                    @Html.HiddenFor(model => model.Datum)
+                                    @Html.HiddenFor(model => model.Tijd)
+
+                                    <button type="submit" value="" id="stap2"><b>NAAR STAP 2</b></button>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-deel" style="color: white;">
+                    <div class="select-tijd" id="select-tijdscherm">
+                        <h3><b>Selecteer een tijd:</b></h3><br>
+                        <div class="lichtebalk">
+
+                            <h3 style="line-height:52px;"><b>@Model.Datum</b></h3>
+
+
+                        </div>
+                        <br>
+                        <form>
+                            <input type="radio" name="time" id="930" value="9:30" checked> 9:30 uur<br>
+                            <input type="radio" name="time" id="1230" value="12:30"> 12:30 uur<br>
+                            <input type="radio" name="time" id="1500" value="15:00"> 15:00 uur<br>
+
+                            <h5>
+                                <span style="position: absolute; bottom: 40px; left: 40px;">
+                                    <a href="/AfspraakMaken/Stap1Van1/" class="terug-naar-datum" id="terugdatum">
+                                        Terug naar datum selecteren
+                                    </a>
+                                </span>
+                            </h5>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-footer" id="footerimg" style="margin-top: 100px">
+            <img class="img-responsive" src="~/images/footerplaatje1.jpg" style="width:100%" />
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $('#stap2').click(function () {
+        var tijd = $('input[name=time]:checked').val();
+        $("#Tijd").val(tijd);
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        var tijdenString = $("body").data('tijden').replace(/:/g, '');
+        var tijdenArray = tijdenString.split(',');
+
+        for (var i = 0; i < tijdenArray.length; i++) {
+            var tijd = tijdenArray[i];
+
+            $("input[type=radio][id=" + tijd + "]").prop('disabled', true);
+        }
+        $(':radio:not(:disabled):first').attr('checked', true);
+    });
+</script>

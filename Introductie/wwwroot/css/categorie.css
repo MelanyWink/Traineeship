@@ -1,0 +1,241 @@
+﻿body {
+    font-family: 'Caudex', serif;
+}
+
+.body-content {
+    background: white;
+    border-top-color: #CCCCCC;
+    border: 0;
+    border-style: solid;
+    margin-top: -70px;
+    z-index: -1;
+}
+
+.lijntje {
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    margin-top: 85px;
+    padding: 0;
+}
+
+.navbar-form {
+    display: none;
+}
+
+.nav > li > a {
+    color: black;
+}
+
+#afsprk-btn {
+    color: white;
+}
+
+.breadcrumb {
+    padding: 8px 30px;
+    list-style: none;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li a {
+    color: lightpink;
+}
+
+.panel panel-default {
+    margin-top: 0;
+}
+
+.main-container {
+    width: 100%;
+    padding: 0;
+}
+
+.sort {
+    margin-right: 120px;
+    display: flex;
+    float: right;
+}
+
+#sorteer-box {
+    height: 36px;
+    width: 215px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.main-row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.filter-en-sorteer {
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.jurken {
+    margin: 0;
+    padding: 0;
+    margin-top: 45px;
+}
+
+.foto-col {
+    height: 430px;
+    width: 280px;
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.geen-resultaten {
+    font-family: 'Caudex', serif;
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#afsprkmaken-btn {
+    color: #ffffff;
+    background-color: #f0597c;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    width: 230px;
+    border-radius: 0;
+    line-height: 37px;
+}
+
+#afsprkmaken-btn:hover {
+    color: #ffffff;
+    background-color: #f0597c;
+    border-color: #f0597c;
+}
+
+#afsprkmaken-btn:active {
+    color: #ffffff;
+    background-color: #f0597c;
+    border-color: #f0597c;
+}
+
+#afsprkmaken-btn:focus {
+    color: #ffffff;
+    background-color: #f0597c;
+    border-color: #f0597c;
+}
+
+.modal-dialog {
+    height: 520px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-dialog a {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-foto {
+    height: 400px;
+    width: 280px;
+    margin-bottom: 15px;
+}
+
+.modal-text p {
+    margin: 0;
+    font-family: 'Caudex', serif;
+}
+
+#jurkmerk {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#jurknr {
+    font-size: 17px;
+}
+
+#jurkkleur {
+    font-size: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-container {
+        display: block;
+    }
+
+    .main-row {
+        display: block;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .filter-en-sorteer {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .sort {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .sort h4 {
+        display: none;
+    }
+
+    #sorteer-box {
+        width: 100%;
+        background:#f0597c;
+        color:#ffffff;
+    }
+
+    .jurken {
+        display: block;
+        overflow: hidden;
+    }
+
+    .foto-col {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

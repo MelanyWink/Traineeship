@@ -1,0 +1,72 @@
+﻿
+
+.body-content {
+    background:white;
+}
+
+.beheer{
+    display:block;
+}
+
+.login{
+    float:right;
+}
+
+
+
+#knoppen{
+    border-width:1px;
+    border-color:black;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#boxKnop{
+    margin:10px;
+    border:2px solid black;
+}
+
+#boxKnop > ul{
+    padding:0;
+}
+
+.klantenAfspraken {
+    
+}
+
+.trouwjurken {
+}
+
+.trouwpakken {
+
+}
+
+
+
+#beheer-btn{
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 20px;
+}
+
+#beheer-btn:hover {
+    color:blue;
+}
+
+li{
+    list-style-type:none;
+}
+
+
+@media (max-width: 767px){
+    #knoppen{
+        display:block;
+    }
+
+
+}
+
+

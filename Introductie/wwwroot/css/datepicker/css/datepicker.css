@@ -1,0 +1,88 @@
+body {
+	
+}
+/* DatePicker Container */
+.ui-datepicker {
+    width: 109%;
+    height: auto;
+    font-family: 'Work Sans', sans-serif;  
+    margin-left: auto;
+    margin-right: auto;
+}
+.ui-datepicker a {
+    text-decoration: none;
+}
+/* DatePicker Table */
+.ui-datepicker table {
+    width: 100%;
+    margin-top: 20px;
+    text-align:center;
+}
+.ui-datepicker-header {
+    background-color: #F97690;
+    font-weight: bold;
+    height: 50px;
+    font-size: 22px;
+    width: 92%;
+    text-align:center;
+}
+.ui-datepicker-title {
+    text-align: center;
+    line-height: 250%;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    cursor: pointer;
+    background-image: url('../../images/Arrows.png');
+    background-repeat: no-repeat;
+    margin-top: 12px;
+    overflow: hidden;
+    line-height: 600%;
+}
+.ui-datepicker-prev{
+  float: left;
+  background-position: center -30px; 
+}
+.ui-datepicker-next {
+  float: right;
+  background-position: center 0px;  
+}
+.ui-datepicker thead {
+    width: 100%;
+    font-size: 17px;
+}
+.ui-datepicker th {
+    padding: 0;
+    text-align: start;
+    width: 25px;
+    height: 20px;
+}
+.ui-datepicker tbody td {
+    padding: 0;
+    text-align: start;
+    width: 25px;
+    height: 20px;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  font-weight: bold;
+  padding-left: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.ui-datepicker-unselectable .ui-state-default {
+    color: #C24762;
+}
+.ui-datepicker-calendar .ui-state-hover {
+  border: 2px #FFFFFF solid;
+  border-radius: 50%
+}
+.ui-datepicker-calendar .ui-state-active {
+  border: 2px #FFFFFF solid;
+  border-radius: 50%
+}

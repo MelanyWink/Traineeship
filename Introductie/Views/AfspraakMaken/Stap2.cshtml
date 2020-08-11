@@ -1,0 +1,137 @@
+﻿@model Introductie.Models.ViewModels.KlantAfspraak
+@{
+}
+<html>
+<head>
+    <title>AfspraakStappen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+           
+    <link rel="stylesheet" type="text/css" href="~/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Stap2.css" />    
+    <link href="~/datepicker/css/datepicker.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>  
+    <script src="~/css/datepicker/js/jquery-1.7.1.min.js"></script>
+    <script src="~/css/datepicker/js/jquery-ui-1.8.18.custom.min.js"></script>   
+
+</head>
+
+<body>
+    <div class="row lijntje text-center">
+        <hr style="margin:0; border-top: 3px solid #eee;" />
+    </div>
+    <div class="bodycontent">
+        <div class="header-plaatje">
+            <img class="img-header" src="~/images/Kopje.jpg" />
+        </div>
+        <div class="content-container">
+            <div class="formulier-venster">
+                <div class="form-deel">
+                    <div class="form-step2" id="formstep2">
+                        <div class="form-steps">
+                            <img class="stepsplaatje" src="~/images/stap2.PNG" />
+                        </div>
+                        <div class="form-text">
+                            <h3>
+                                <b>
+                                    Stap 2, Gegevens invullen
+                                </b>
+                            </h3>
+                            <br>
+
+                            <script>
+
+                                function checkEmail(theForm) {
+                                if (theForm.mail.value != theForm.herhaalmail.value)
+                                {
+                                alert('Deze emails komen niet overeen!');
+                                return false;
+                                } else {
+                                return true;
+                                }
+                                }
+
+                            </script> 
+
+                            <form action="/AfspraakMaken/Stap3/" method="post" onsubmit="return checkEmail(this);">
+                                <b>
+                                    Voor- en achternaam*<br>
+                                    <input type="text" name="naam" id="input" required><br>
+                                    Trouwdatum*<br>
+                                    <input type="date" name="trouwdatum" id="input" required><br>
+                                    Telefoonnummer*<br>
+                                    <input type="tel" name="telefoon" pattern="[0-9]{10}" placeholder="0612345678" id="input" required><br>
+                                    E-mailadres*<br>
+                                    <input type="email" name="mail" placeholder="honeymoon@shop.com" id="input" required><br>
+                                    Herhaal E-mailadres*<br>
+                                    <input type="email" name="herhaalmail" placeholder="honeymoon@shop.com" id="input" required><br>
+                                </b>
+                                <input type="checkbox" name="checkbox"> Ja, ik wil me graag aanmelden voor de<br>
+                                inspirerende nieuwsbrief van Honeymoon Shop
+                                <br><br>
+
+                                
+                           
+                            
+                                @using (Html.BeginForm("Stap3", "AfspraakMaken", FormMethod.Post))
+                                {
+
+                                    @Html.HiddenFor(model => model.Datum)
+                                    @Html.HiddenFor(model => model.Tijd)
+                                    @Html.HiddenFor(model => model.Klant.Naam)
+                                    @Html.HiddenFor(model => model.Klant.TrouwDatum)
+                                    @Html.HiddenFor(model => model.Klant.Telnr)
+                                    @Html.HiddenFor(model => model.Klant.Email)
+
+                                    <button type="submit" id="klantgegevens" value=""><b>NAAR STAP 3</b></button>
+
+                                }
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-deel">
+                    <div class="afwacht-gegevens" id="afwacht-gegevensscherm">
+                        <h3>
+                            <b>
+                                Gekozen tijd en datum:
+                            </b>
+                        </h3>
+                        <br>
+                        <div class="lichtebalk">
+                            <h3 style="line-height:52px;"><b>@Model.Datum OM @Model.Tijd U</b></h3>
+
+                        </div>
+                        <br>
+                        <h4>
+                            Vul je persoonlijke gegevens in om de pasafspraak compleet te maken.
+                        </h4>
+                        <h5>
+                            <span style="position: absolute; bottom: 40px; left: 40px;">
+                                <a href="/AfspraakMaken/Stap1Van1/" class="terug-naar-datum" id="terugdatum">
+                                    Terug naar stap 1 om datum te wijzigen
+                                </a>
+                            </span>
+                        </h5>
+                    </div>                                        
+                </div>
+            </div>
+        </div>
+        <div class="img-footer" id="footerimg" style="margin-top: 300px">
+            <img class="img-responsive" src="~/images/footerplaatje1.jpg" style="width:100%" />
+        </div>
+    </div>
+</body>
+</html>
+<script>
+$('#klantgegevens').click(function () {
+    var naam = $('input[name=naam]').val();
+    var trouwdatum = $('input[name=trouwdatum]').val();
+    var telnr = $('input[name=telefoon]').val();
+    var email = $('input[name=mail]').val();
+    $("#klant_Naam").val(naam);
+    $("#klant_TrouwDatum").val(trouwdatum);
+    $("#klant_Telnr").val(telnr);
+    $("#klant_Email").val(email);
+});
+</script>

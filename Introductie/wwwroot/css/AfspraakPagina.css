@@ -1,0 +1,245 @@
+﻿.body {
+    font-family: HGPMinchoL;
+    font-size:18px;
+}
+
+.body-content {
+    background-color:white;
+}
+
+.navbar-form {
+    display: none;
+}
+
+.top-container {
+    max-width: 100%;
+    max-height: 485px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.top-container > img {
+    max-width:100%; 
+    max-height:100%;
+    z-index:-1;
+}
+
+#afspraak-content h4 {
+    font-weight:bold;
+}
+
+p {
+    font-size:16px;
+}
+.text-info {
+    color:black;
+}
+
+.img-responsive {
+    max-height:100%;
+    max-width:100%;
+}
+
+.foto-btn {
+    padding:0;
+    margin-left:10%;
+}
+
+#afspraak-content {
+    display:flex;
+    background-color:transparent;
+    padding:10%;
+    padding-bottom:40px;
+    margin:0;
+}
+
+.afspraak-knoppen {
+    display:flex;
+    height:220px;
+    padding-left:5%;
+}
+
+.afspraak-knoppen > a {
+    margin:0;
+    height:220px;
+    width:220px;
+    margin-left:4%;
+}
+
+#btn-foto {
+    padding:0;
+    height:220px;
+    width:220px;
+}
+
+.jumbotron {
+    padding-right:0;  
+}
+
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.video-content {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.video-row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-video {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#title-img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videos {
+    margin-left: 80px;
+    margin-right: 35px;
+    max-width: 810px;
+    max-height: 100%;
+}
+
+
+
+.optie-video {
+    margin-top: 25px;
+
+
+}
+
+.video-knoppen {
+    margin-left: 18px;
+    margin-right: auto;
+}
+
+.keuze-video:hover a {
+    color: #f0597c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.keuze-video:hover .circle {
+    background: #f0597c;
+}
+
+.keuze-video {
+    color: white;
+    display: flex;
+    margin-bottom: 30px;
+    height: 30px;
+}
+
+.circle {
+    border-radius: 50px;
+    line-height: 39px;
+    text-align: center;
+    background: rgba(221, 221, 221, 1);
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.circle:hover {
+    cursor:pointer;
+}
+
+.optieletter {
+    color: black;
+    font-size: 120%;
+}
+
+.optie {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.optie:hover {
+    cursor:pointer;
+}
+
+.footer-foto {
+    max-height:600px;
+}
+
+.footer-foto > img {
+    max-height:100%;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    #afspraak-content{
+        display: block;
+        height: 960px;
+        margin-bottom: 60px;
+    }
+    .jumbotron{
+        height: 960px;
+        margin-bottom: 80px;
+    }
+    .text-info{
+        display: block;
+        padding-left: 50px;
+        padding-right: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .afspraak-knoppen{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;       
+    }
+
+    .foto{
+        margin: 20px;
+        padding:0;
+    }
+
+     .keuze-video {
+        margin-left: 25%;
+        margin-bottom: 5%;
+    }
+
+    .video-content {
+        margin-bottom: 60px;
+    }
+
+    .videos {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .video-knoppen {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .optieletter {
+        font-size: 100%;
+    }
+
+    .circle {
+        line-height: 29px;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+}

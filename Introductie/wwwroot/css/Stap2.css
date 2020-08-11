@@ -1,0 +1,207 @@
+﻿body {
+    background-color: #FFFFFF;
+    font-family: 'Caudex', serif;
+}
+
+.navbar-form {
+    display: none;
+}
+
+.nav > li > a {
+    color: black;
+}
+
+#afsprk-btn {
+    color: white;
+}
+
+.lijntje {
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.header-plaatje{
+    width: 100%;
+    margin: 0; 
+    border: 0;
+}
+
+.img-header{
+    width: 86%;
+    margin-right: 7%;
+    margin-left: 7%;
+}
+
+.content-container{
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 20px;
+}
+
+.formulier-venster{
+    width: 82%;
+    margin-left: 7%;
+    margin-right: 11%;
+    min-height: 500px;
+    max-height: 700px;
+    padding: 0;
+    border: hidden 1px;
+}
+
+.form-deel{
+    height: 700px;
+    width: 55%;
+    margin: 0;
+    float: left;
+    border: 0;
+    box-shadow: #e2e2e2 0 0 20px;
+}
+.form-step2{
+    height: 500px;
+    width: 100%;
+    float: right;
+    display: block;
+}
+.form-steps{
+    height: 500px;
+    width: 25%;
+    float: left;
+}
+.stepsplaatje{
+    height: 100%;
+    width: 100%;
+}
+
+.form-text{
+    height: 100%;
+    width: 75%;
+    float:right;
+    padding: 40px;
+}
+
+.select-deel{
+    height: 500px;
+    width: 45%;
+    float: right;
+    background-color: #F06E8A;
+    border: 0;   
+    position: relative;
+    box-shadow: #e2e2e2 0 0 20px;
+    color: white;
+}
+.lichtebalk{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #F97690;
+    
+}
+.afwacht-gegevens{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 40px;
+    position: absolute;
+    color: white;
+    display: block;
+}
+.terug-naar-datum{
+    float: left; 
+    color:white;
+    bottom:auto;
+}
+.img-footer{
+    width: 100%;
+    margin-right: 0;
+    margin-top: 100px;
+}
+
+a:link {
+    color: white;
+    
+}
+a:visited {
+    color: white;
+}
+a:active {
+    color:white;
+}
+h3{
+    margin: 0;
+}
+
+h4{
+    margin: 0;
+}
+
+h5{
+    margin:0;
+}
+#input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#klantgegevens{
+   border:none;
+   background: #f0597c;
+   color: white;
+   font-family: 'Work Sans', sans-serif;
+   height: 50px;
+   width: 130px;
+   text-align: center;
+}
+
+footer{
+    margin-right:4%;
+    margin-left:4%;
+    padding-top:4px;
+    padding-bottom:1%;
+}
+
+@media (max-width: 767px) {
+    .container body-content{
+        width: 100%;
+        margin: 0;
+    }
+    .content-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .form-step2{
+        height: 432.400px;
+    }
+    .form-text{
+        width: 100%;
+    }
+    .form-steps{
+        display: none;
+        margin: 0;
+    }
+    .formulier-venster{
+        margin: 0;
+        width: 100%;
+        display: block;
+    }
+    .form-deel{
+        display: block;
+        width: 100%;
+    }
+    .select-deel{
+        display: block;
+        width: 100%;
+    }
+    h3{
+        font-size:16px;
+    }
+}

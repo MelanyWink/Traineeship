@@ -1,0 +1,131 @@
+﻿@model Introductie.Models.ViewModels.KlantAfspraak
+@{
+
+}
+<html>
+<head>
+    <title>AfspraakStappen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="~/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Stap1Van1.css" />
+    <link href="~/css/datepicker/css/datepicker.css" rel="stylesheet" />
+    <script src="~/css/datepicker/js/jquery-1.7.1.min.js"></script>
+    <script src="~/css/datepicker/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+</head>
+
+<body data-disableddates="@string.Join(",", Model.NietBeschikbareDatums)">
+    <div class="row lijntje text-center">
+        <hr style="margin:0; border-top: 3px solid #eee;" />
+    </div>
+        <div class="header-plaatje">
+            <img class="img-header" src="~/images/Kopje.jpg" />
+        </div>
+        <div class="content-container">
+            <div class="formulier-venster">
+                <div class="form-deel">
+                    <div class="form-step1" id="formstep1">
+                        <div class="form-steps">
+                            <img class="stepsplaatje" src="~/images/step1.PNG" />
+                        </div>
+                        <div class="form-text">
+                            <h3>
+                                <b>
+                                    Stap 1, Datum en tijd selecteren
+                                </b>
+                            </h3>
+                            <br>
+                            <h4>
+                                Selecteer eerst een datum en vervolgens<br>
+                                een tijdstip dat je wilt komen passen!
+                            </h4><br>
+                            <h5>
+                                Openingstijden:<br>
+                            </h5>
+                            <div class="openingstijden">
+                                <div class="dagen">
+                                    <h5>
+                                        <b>
+                                            MA<br>
+                                            DI-VR<br>
+                                            ZA<br>
+                                            ZO<br>
+                                        </b>
+                                    </h5>
+                                </div>
+                                <div class="tijden">
+                                    <h5>
+                                        <b>
+                                            12:00-17:30<br>
+                                            09:30-17:30<br>
+                                            09:30-18:00<br>
+                                            11:00-17:00<br>
+                                        </b>
+                                    </h5>
+                                </div>
+                            </div>
+                            <br><br>
+                            <h5>
+                                *Op alle werkdagen kunnen er ook schoenen worden<br>
+                                gepast. Helaas is dit niet mogelijk in het weekend.
+                            </h5><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-deel">
+                    <div class="select-datum" id="select-datumscherm">
+                        <h3>
+                            <b>
+                                Selecteer een datum:
+                            </b>
+                        </h3><br><br>
+                        <script>
+                            $(function () {
+                                var $hiddenInput = $('#datum');
+                                $("#datepicker").datepicker({
+                                    inline: true,
+                                    dateFormat: 'dd/mm/yy',
+                                    beforeShowDay: function (date) {
+                                        var datumsString = $("body").data('disableddates').replace(/\//g, '-');
+                                        var datumsArray = datumsString.split(',');                                        
+                                        var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
+                                        return [ datumsArray.indexOf(string) == -1 ]
+                                        
+                                    },
+                                    minDate: +1,
+                                    altField: '#datum',
+                                    firstDay: 1,
+                                    dayNamesMin: ['ZO', 'MA', 'DI', 'WOE', 'DO', 'VR', 'ZA'],
+                                    monthNames: ['JANUARI', 'FEBRUARI', 'MAART', 'APRIL', 'MEI', 'JUNI', 'JULI', 'AUGUSTUS', 'SEPTEMBER', 'OKTOBER', 'NOVEMBER', 'DECEMBER' ]
+                                });
+                            });
+                        </script>
+                        <div id="datepicker"></div>
+
+
+
+
+
+                        @using (Html.BeginForm("Stap2Van1", "AfspraakMaken", FormMethod.Post)) {
+                        @Html.HiddenFor(model => model.Datum)
+
+                            <button type="submit" value="" id="ddatum">Selecteer een tijd</button>
+
+            
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-footer" id="footerimg" style="margin-top: 100px">
+            <img class="img-responsive" src="~/images/footerplaatje1.jpg" style="width:100%" />
+        </div>
+</body>
+</html>
+<script>
+    $('#ddatum').click(function () {
+        $("#Datum").val($('#datepicker').datepicker({ dateFormat: "dd-mm-yyyy" }).val());
+    });
+</script>

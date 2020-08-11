@@ -1,0 +1,136 @@
+﻿@model Introductie.Models.ViewModels.KlantAfspraak
+@{
+}
+<html>
+<head>
+    <title>AfspraakStappen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="~/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Stap3.css" />
+    <link href="~/datepicker/css/datepicker.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/css/datepicker/js/jquery-1.7.1.min.js"></script>
+    <script src="~/css/datepicker/js/jquery-ui-1.8.18.custom.min.js"></script>
+
+</head>
+
+<body>
+    <div class="row lijntje text-center">
+        <hr style="margin:0; border-top: 3px solid #eee;" />
+    </div>
+    <div class="bodycontent">
+        <div class="header-plaatje">
+            <img class="img-header" src="~/images/Kopje.jpg" />
+        </div>
+        <div class="content-container">
+            <div class="formulier-venster">
+                <div class="form-deel">
+                    <div class="form-step3" id="formstep3">
+                        <div class="form-steps">
+                            <img class="stepsplaatje" src="~/images/step3.PNG" />
+                        </div>
+                        <div class="form-text">
+                            <h3>
+                                <b>
+                                    Stap 3, Gegevens controleren
+                                </b>
+                            </h3>
+                            <br>
+                            <h4>
+                                Controleer alle gegevens voor je<br> 
+                                pasafspraak bij Dream Wedding aan<br> 
+                                Wateringenstraat 4, te Rotterdam.
+                            </h4>
+                            <br><br>
+                              @using (Html.BeginForm("AfspraakVoltooid", "AfspraakMaken", FormMethod.Post))
+                            {
+
+                                @Html.HiddenFor(model => model.Datum)
+                                @Html.HiddenFor(model => model.Tijd)
+                                @Html.HiddenFor(model => model.Klant.Naam)
+                                @Html.HiddenFor(model => model.Klant.TrouwDatum)
+                                @Html.HiddenFor(model => model.Klant.Telnr)
+                                @Html.HiddenFor(model => model.Klant.Email)
+
+                                <button type="submit" value="" class="Bevestigbutton" id="bevestig-knop"><b>AFSPRAAK BEVESTIGEN</b></button>
+
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="select-deel">
+                    <div class="controleer-gegevens" id="controleer-gegevensscherm">
+                        <h3>
+                            <b>
+                                Controleer je gegevens:
+                            </b>
+                        </h3>
+                        <br>
+                        <div class="lichtebalk">
+                            <h3 style="line-height:52px;"><b>@Model.Datum OM @Model.Tijd U</b></h3>
+                        </div>
+                        <div class="gegevens-klant">
+                            <br>
+                            <table>
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <h4><b>Naam:</b></h4>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <h4>@Model.Klant.Naam</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4><b>Trouwdatum:</b></h4>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <h4>@Model.Klant.TrouwDatum</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4><b>Telefoon:</b></h4>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <h4>@Model.Klant.Telnr</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4><b>E-mail:</b></h4>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <h4>@Model.Klant.Email</h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>                    
+                        </div>
+                        @using (Html.BeginForm("Stap2", "AfspraakMaken", FormMethod.Post))
+                        {
+
+                            @Html.HiddenFor(model => model.Datum)
+                            @Html.HiddenFor(model => model.Tijd)
+
+                            <button type="submit" id="terug-knop" value="">Terug naar stap 2 om gegevens te wijzigen</button>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-footer" id="footerimg" style="margin-top: 100px">
+            <img class="img-responsive" src="~/images/footerplaatje1.jpg" style="width:100%" />
+        </div>
+    </div>
+</body>
+</html>

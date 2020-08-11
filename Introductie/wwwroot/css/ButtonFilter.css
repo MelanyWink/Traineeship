@@ -1,0 +1,38 @@
+﻿.filter-btn {
+    display: none;
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+
+    .filter-btns {
+        display: flex;
+    }
+
+    .filter-btn {
+        display: block;
+        width: 50%;
+        border-radius: 0;
+        color: #ffffff;
+        background-color: #f0597c;
+        font-family: 'Maven Pro', sans-serif;
+    }
+
+    .filter-btn:hover {
+        color: #ffffff;
+        background-color: #f0597c;
+        border-color: #f0597c;
+    }
+
+    .filter-btn:active {
+        color: #ffffff;
+        background-color: #f0597c;
+        border-color: #f0597c;
+    }
+
+    .filter-btn:focus {
+        color: #ffffff;
+        background-color: #f0597c;
+        border-color: #f0597c;
+    }
+}

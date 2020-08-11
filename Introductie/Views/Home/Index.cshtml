@@ -1,0 +1,117 @@
+﻿
+@{
+}
+
+<html>
+
+<head>
+    <title>Afspraak Pagina</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="~/css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/afspraakpagina.css" />
+</head>
+
+
+<body>
+    <div class="top-container" margin-top: 0;>
+        <img class="img-responsive header-foto" src="~/images/afspraakfotos/afspraakpagina-top2.jpg" />
+    </div>
+
+
+    <div class="jumbotron row" id="afspraak-content">
+
+        <div class="afspraak-knoppen">
+            <div class="foto col-md-4">
+                <a href="AfspraakMaken/Stap1Van1/">
+                    <img class="img-responsive" id="btn-foto" src="~/images/afspraakfotos/TrouwjurkenPassen.PNG" />
+                </a>
+            </div>
+            <div class="foto col-md-4">
+                <a href="/AfspraakMaken/Stap1Van1/">
+                    <img class="img-responsive" id="btn-foto" src="~/images/afspraakfotos/PakPassen.PNG" />
+                </a>
+            </div>
+            <div class="foto col-md-4">
+                <a href="/AfspraakMaken/Stap1Van1/">
+                    <img class="img-responsive" id="btn-foto" src="~/images/afspraakfotos/AfspeldAfspraakFoto.PNG" />
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container video-content">
+        <div class="row title-video">
+            <img class="img-responsive" id="title-img" src="~/images/afspraakfotos/afspraakpagina-video-title.jpg" />
+        </div>
+
+        <div class="row video-row">
+            <div class="col-md-6 videos">
+                <div id="video1" class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive" src="//www.youtube.com/watch?v=fZ7ciYTXTXw"></iframe>
+                </div>
+                <div id="video2" class="embed-responsive embed-responsive-16by9" style="display: none">
+                    <iframe class="embed-responsive" src="//www.youtube.com/watch?v=o_y67-O61MA"></iframe>
+                </div>
+                <div id="video3" class="embed-responsive embed-responsive-16by9" style="display: none">
+                    <iframe class="embed-responsive" src="//www.youtube.com/watch?v=5hOHcbanr8U"></iframe>
+                </div>
+                <div id="video4" class="embed-responsive embed-responsive-16by9" style="display: none">
+                    <iframe class="embed-responsive" src="https://www.youtube.com/watch?v=Q91krtT8jZw"></iframe>
+                </div>
+            </div>
+
+            <div class="col-md-3 video-knoppen">
+                <div class="optie-video">
+
+                    <div class="keuze-video">
+                        <div class="circle">1</div>
+                        <div class="optie">
+                            <a onclick="document.getElementById('video1').style.display='block',
+                                           document.getElementById('video2').style.display = 'none',
+                                           document.getElementById('video3').style.display = 'none',
+                                           document.getElementById('video4').style.display = 'none' " class="optieletter">De winkel</a>
+                        </div>
+                    </div>
+
+                    <div class="keuze-video">
+                        <div class="circle">2</div>
+                        <div class="optie">
+                            <a onclick="document.getElementById('video2').style.display='block',
+                                           document.getElementById('video1').style.display = 'none',
+                                           document.getElementById('video3').style.display = 'none',
+                                           document.getElementById('video4').style.display = 'none' " class="optieletter">Onze specialistem</a>
+                        </div>
+                    </div>
+                    <div class="keuze-video">
+                        <div class="circle">3</div>
+                        <div class="optie">
+                            <a onclick="document.getElementById('video3').style.display='block',
+                                           document.getElementById('video2').style.display = 'none',
+                                           document.getElementById('video1').style.display = 'none',
+                                           document.getElementById('video4').style.display = 'none' " class="optieletter">Naai-atelier</a>
+                        </div>
+                    </div>
+                    <div class="keuze-video">
+                        <div class="circle">4</div>
+                        <div class="optie">
+                            <a onclick="document.getElementById('video4').style.display='block',
+                                           document.getElementById('video2').style.display = 'none',
+                                           document.getElementById('video3').style.display = 'none',
+                                           document.getElementById('video1').style.display = 'none'" class="optieletter">Servicepunten</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="img-container footer-foto">
+        <img class="img-responsive" src="~/images/home/footerimg.jpg" />
+    </div>
+</body>
+
+</html>
